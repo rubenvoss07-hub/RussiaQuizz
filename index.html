@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Revolution and Collapse — Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+<style>
+  :root {
+    --bg: #1a1410;
+    --bg-2: #221a14;
+    --paper: #f0e3c8;
+    --paper-2: #e3d3b3;
+    --paper-dark: #c9b48a;
+    --ink: #2a1f15;
+    --ink-soft: #4a3826;
+    --ink-mute: #7a6a55;
+    --accent: #8b1e1e;     /* deep red */
+    --accent-2: #c4a253;   /* aged brass */
+    --gold: #b8902c;
+    --green: #4a6b3a;
+    --line: #8a7a5e;
+    --shadow: rgba(20, 12, 5, 0.45);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--ink);
+    background:
+      radial-gradient(ellipse at top, rgba(60, 30, 15, 0.6), transparent 70%),
+      linear-gradient(180deg, #1a1410 0%, #0e0a07 100%);
+    background-attachment: fixed;
+  }
+
+  /* Subtle film grain / paper texture overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.015) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.015) 0%, transparent 50%);
+    z-index: 0;
+  }
+
+  .wrap {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    z-index: 1;
+  }
+
+  /* --- Header --- */
+  header.hero {
+    text-align: center;
+    padding: 28px 20px 36px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(184, 144, 44, 0.3);
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--accent-2);
+    font-size: 12px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+
+  h1.title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: var(--paper);
+    font-size: clamp(28px, 5vw, 46px);
+    letter-spacing: 0.05em;
+    margin: 0 0 10px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .subtitle {
+    color: var(--paper-dark);
+    font-style: italic;
+    font-size: clamp(15px, 2vw, 18px);
+    margin: 0 0 18px;
+    opacity: 0.85;
+  }
+
+  .meta {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--ink-mute);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .meta .dot { margin: 0 10px; color: var(--accent-2); }
+
+  /* --- Card / Paper Panel --- */
+  .panel {
+    background:
+      linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow:
+      0 20px 50px var(--shadow),
+      0 0 0 1px rgba(184, 144, 44, 0.15) inset;
+    padding: 32px clamp(20px, 4vw, 44px);
+    position: relative;
+  }
+  .panel::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(138, 122, 94, 0.4);
+    pointer-events: none;
+    border-radius: 2px;
+  }
+
+  /* --- Start screen --- */
+  .start-screen .intro {
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 auto 28px;
+    max-width: 640px;
+  }
+  .intro strong { color: var(--ink); }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .stat {
+    text-align: center;
+    padding: 16px 8px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(138, 122, 94, 0.3);
+    border-radius: 3px;
+  }
+  .stat .num {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    line-height: 1.1;
+  }
+  .stat .lbl {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* --- Buttons --- */
+  .btn {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 14px 36px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: var(--paper);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.18s ease;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 14px rgba(139, 30, 30, 0.3);
+  }
+  .btn:hover {
+    background: #a82626;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.25), 0 8px 18px rgba(139, 30, 30, 0.4);
+  }
+  .btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 3px 6px rgba(139, 30, 30, 0.3);
+  }
+  .btn.ghost {
+    background: transparent;
+    color: var(--accent);
+    box-shadow: none;
+  }
+  .btn.ghost:hover {
+    background: rgba(139, 30, 30, 0.08);
+    color: #6a1414;
+  }
+  .center { text-align: center; }
+
+  /* --- Question screen --- */
+  .progress-bar {
+    height: 6px;
+    background: rgba(138, 122, 94, 0.25);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+    width: 0%;
+    transition: width 0.4s ease;
+  }
+
+  .q-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+  }
+  .q-header .section-tag {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .question {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0 0 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(138, 122, 94, 0.35);
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .option {
+    text-align: left;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(138, 122, 94, 0.45);
+    color: var(--ink);
+    padding: 14px 18px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 17px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 400;
+  }
+  .option .letter {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 13px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--ink-mute);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+    flex-shrink: 0;
+    transition: all 0.15s ease;
+  }
+  .option:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.55);
+    border-color: var(--accent-2);
+    transform: translateX(2px);
+  }
+  .option:hover:not(:disabled) .letter {
+    border-color: var(--accent-2);
+    color: var(--accent);
+  }
+  .option:disabled { cursor: default; }
+  .option.correct {
+    background: rgba(74, 107, 58, 0.18);
+    border-color: var(--green);
+    color: var(--ink);
+  }
+  .option.correct .letter {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--paper);
+  }
+  .option.wrong {
+    background: rgba(139, 30, 30, 0.12);
+    border-color: var(--accent);
+    color: var(--ink);
+  }
+  .option.wrong .letter {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--paper);
+  }
+  .option.faded { opacity: 0.55; }
+
+  .feedback {
+    background: rgba(255, 255, 255, 0.4);
+    border-left: 3px solid var(--accent-2);
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    font-style: italic;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    border-radius: 0 3px 3px 0;
+  }
+  .feedback .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-style: normal;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .feedback.correct { border-left-color: var(--green); }
+  .feedback.correct .label { color: var(--green); }
+  .feedback.wrong { border-left-color: var(--accent); }
+
+  .q-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .score-pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .score-pill b { color: var(--accent); font-weight: 600; }
+
+  /* --- Results screen --- */
+  .result-screen {
+    text-align: center;
+  }
+  .seal {
+    width: 130px;
+    height: 130px;
+    margin: 6px auto 18px;
+    border: 3px double var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(196, 162, 83, 0.2), transparent);
+    position: relative;
+  }
+  .seal .score-num {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .seal .score-num small {
+    font-size: 16px;
+    color: var(--ink-mute);
+    font-weight: 500;
+  }
+
+  .result-title {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    color: var(--ink);
+    margin: 8px 0 14px;
+    letter-spacing: 0.04em;
+  }
+  .result-blurb {
+    color: var(--ink-soft);
+    font-size: 17px;
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 0 auto 28px;
+  }
+  .result-blurb i { color: var(--accent); }
+
+  .breakdown {
+    text-align: left;
+    margin: 24px 0;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(138, 122, 94, 0.3);
+    padding: 18px 20px;
+    border-radius: 3px;
+  }
+  .breakdown h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+    color: var(--ink);
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(138, 122, 94, 0.3);
+  }
+  .breakdown ul { list-style: none; padding: 0; margin: 0; }
+  .breakdown li {
+    display: flex;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(138, 122, 94, 0.2);
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .breakdown li:last-child { border-bottom: none; }
+  .breakdown .mark {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--paper);
+  }
+  .breakdown .mark.ok { background: var(--green); }
+  .breakdown .mark.no { background: var(--accent); }
+
+  .actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  footer.foot {
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: rgba(240, 227, 200, 0.4);
+    text-transform: uppercase;
+  }
+
+  /* Fade transitions */
+  .fade-in {
+    animation: fadeIn 0.35s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 540px) {
+    .wrap { padding: 20px 14px 60px; }
+    .stats-row { grid-template-columns: 1fr; }
+    .panel { padding: 24px 18px; }
+    .actions { flex-direction: column; }
+    .actions .btn { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">The Great War &mdash; Topic 7</p>
+    <h1 class="title">Revolution &amp; Collapse</h1>
+    <p class="subtitle">A quiz on the fall of the Eastern Front and how it reshaped the war.</p>
+    <p class="meta">Historical Documentary <span class="dot">&#9670;</span> 1917 &ndash; 1918 <span class="dot">&#9670;</span> 15 Questions</p>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="foot">&mdash; Based on the documentary script &ldquo;Revolution and Collapse&rdquo; &mdash;</footer>
+</div>
+
+<script>
+  const QUESTIONS = [
+    {
+      section: "Section 2 — The Eastern Front",
+      q: "Roughly how long was the Eastern Front battle line?",
+      options: [
+        "About 200 kilometres",
+        "Over 1,000 kilometres",
+        "Around 500 kilometres",
+        "Less than 100 kilometres"
+      ],
+      answer: 1,
+      explain: "The Eastern Front stretched over a thousand kilometres, from the Baltic Sea to the Black Sea — far longer than the Western Front."
+    },
+    {
+      section: "Section 2 — The Eastern Front",
+      q: "How did the Eastern Front differ from the Western Front in character?",
+      options: [
+        "It was a static trench war just like the West",
+        "It was mostly a naval campaign",
+        "It was vast and mobile — armies advanced and retreated across huge distances",
+        "It was largely fought from the air"
+      ],
+      answer: 2,
+      explain: "Unlike the deadlock of the West, the Eastern Front was vast and mobile, with no continuous wall of trenches."
+    },
+    {
+      section: "Section 2 — The Eastern Front",
+      q: "What was the state of the Russian army entering the war?",
+      options: [
+        "The smallest but best equipped army in Europe",
+        "The largest army in the world, but badly supplied",
+        "A volunteer force trained by the British",
+        "Numerically weak but with superior artillery"
+      ],
+      answer: 1,
+      explain: "Russia had the largest army in the world, but soldiers often lacked rifles, boots, and food. Poor leadership and weak industry produced massive casualties."
+    },
+    {
+      section: "Section 3 — The Russian Revolution",
+      q: "When did the February Revolution take place (by the modern calendar)?",
+      options: [
+        "November 1916",
+        "January 1917",
+        "March 1917",
+        "May 1918"
+      ],
+      answer: 2,
+      explain: "Although called the 'February Revolution' under the old Russian calendar, the protests in Petrograd broke out in March 1917."
+    },
+    {
+      section: "Section 3 — The Russian Revolution",
+      q: "What happened to Tsar Nicholas II during the February Revolution?",
+      options: [
+        "He was assassinated immediately",
+        "He fled to Germany",
+        "He abdicated, ending three hundred years of Romanov rule",
+        "He led the army against the protesters"
+      ],
+      answer: 2,
+      explain: "Within days of the protests, Nicholas II abdicated, ending 300 years of Romanov rule over Russia."
+    },
+    {
+      section: "Section 3 — The Russian Revolution",
+      q: "What fatal decision did the Provisional Government make?",
+      options: [
+        "It immediately signed peace with Germany",
+        "It kept Russia in the war",
+        "It restored the Tsar to power",
+        "It declared war on Britain and France"
+      ],
+      answer: 1,
+      explain: "The Provisional Government kept Russia in the war — the fighting and suffering continued, and so did the people's anger."
+    },
+    {
+      section: "Section 3 — The Russian Revolution",
+      q: "Who led the Bolsheviks?",
+      options: [
+        "Joseph Stalin",
+        "Leon Trotsky",
+        "Tsar Nicholas II",
+        "Vladimir Lenin"
+      ],
+      answer: 3,
+      explain: "Vladimir Lenin led the Bolsheviks and seized power in November 1917."
+    },
+    {
+      section: "Section 3 — The Russian Revolution",
+      q: "What was the simple, powerful Bolshevik slogan?",
+      options: [
+        "Workers of the World, Unite!",
+        "Peace, Land, and Bread",
+        "Liberty, Equality, Fraternity",
+        "For Tsar and Country"
+      ],
+      answer: 1,
+      explain: "Lenin's promise — 'Peace, Land, and Bread' — appealed to soldiers, peasants and workers exhausted by war and shortage."
+    },
+    {
+      section: "Section 3 — The Russian Revolution",
+      q: "When did the Bolsheviks seize power (by the modern calendar)?",
+      options: [
+        "October 1917",
+        "November 1917",
+        "March 1918",
+        "July 1917"
+      ],
+      answer: 1,
+      explain: "Although known as the October Revolution under the old calendar, the Bolshevik seizure of power happened in November 1917."
+    },
+    {
+      section: "Section 3 — The Russian Revolution",
+      q: "Which treaty took Russia out of the First World War?",
+      options: [
+        "The Treaty of Versailles",
+        "The Treaty of Sèvres",
+        "The Treaty of Brest-Litovsk",
+        "The Treaty of Saint-Germain"
+      ],
+      answer: 2,
+      explain: "In March 1918 the Bolsheviks signed the Treaty of Brest-Litovsk with Germany and the Central Powers, ending Russia's war."
+    },
+    {
+      section: "Section 3 — The Russian Revolution",
+      q: "Which territories did Russia surrender under Brest-Litovsk?",
+      options: [
+        "Siberia, Mongolia and Crimea",
+        "Poland, Bohemia and Serbia",
+        "Ukraine, the Baltic states and Finland",
+        "Only a thin strip of land near Berlin"
+      ],
+      answer: 2,
+      explain: "Russia surrendered enormous territory — Ukraine, the Baltic states, and Finland — losing a huge share of its population, farmland, and industry."
+    },
+    {
+      section: "Section 4 — The Strategic Balance",
+      q: "Roughly how many German divisions were transferred from the East to the Western Front after Russia's collapse?",
+      options: [
+        "About 10 divisions",
+        "Around 50 divisions",
+        "Over 200 divisions",
+        "None — the troops stayed in Russia"
+      ],
+      answer: 1,
+      explain: "Germany moved around fifty divisions — hundreds of thousands of soldiers — west, giving it for the first time a real numerical advantage."
+    },
+    {
+      section: "Section 4 — The Strategic Balance",
+      q: "What was the name of Germany's massive 1918 attack in the West?",
+      options: [
+        "Operation Barbarossa",
+        "The Schlieffen Plan",
+        "The Ludendorff Retreat",
+        "The Spring Offensive (Kaiserschlacht)"
+      ],
+      answer: 3,
+      explain: "In spring 1918 Germany launched the Kaiserschlacht — the 'Kaiser's Battle' — hoping to win before American troops arrived in force."
+    },
+    {
+      section: "Section 4 — The Strategic Balance",
+      q: "Why did the Spring Offensive ultimately fail?",
+      options: [
+        "Germany ran out of ammunition before the first day",
+        "Russia rejoined the war on the Allied side",
+        "The army overstretched, supply lines failed, and fresh US troops arrived in France",
+        "Bad weather prevented any advance at all"
+      ],
+      answer: 2,
+      explain: "The offensive overstretched the German army; supply lines couldn't keep up, soldiers were exhausted, and fresh American troops were pouring into France."
+    },
+    {
+      section: "Section 5 — Significance",
+      q: "What was the long-term political significance of the Russian Revolution?",
+      options: [
+        "It restored the Romanov dynasty",
+        "It produced the world's first communist state — the Soviet Union",
+        "It ended communism forever in Europe",
+        "It united Russia with Germany permanently"
+      ],
+      answer: 1,
+      explain: "The Revolution gave birth to the Soviet Union — the world's first communist state — which would shape global politics for the rest of the 20th century."
+    }
+  ];
+
+  const app = document.getElementById("app");
+  let currentIndex = 0;
+  let score = 0;
+  let answers = [];
+
+  // ---------- Screens ----------
+
+  function renderStart() {
+    app.innerHTML = `
+      <section class="panel start-screen fade-in">
+        <p class="intro">
+          In March 1917, strikes erupted in Petrograd. Within a year, an entire front of the Great War had vanished — and the strategic balance of the conflict shifted overnight.
+          <br><br>
+          This quiz tests what you remember from the documentary <strong>&ldquo;Revolution and Collapse&rdquo;</strong> &mdash;
+          from the Tsar's abdication to the Treaty of Brest-Litovsk, and from the Kaiserschlacht to the armistice of November 1918.
+        </p>
+        <div class="stats-row">
+          <div class="stat"><span class="num">15</span><span class="lbl">Questions</span></div>
+          <div class="stat"><span class="num">5</span><span class="lbl">Sections</span></div>
+          <div class="stat"><span class="num">~5</span><span class="lbl">Minutes</span></div>
+        </div>
+        <div class="center">
+          <button class="btn" id="startBtn">Begin the Quiz</button>
+        </div>
+      </section>
+    `;
+    document.getElementById("startBtn").addEventListener("click", () => {
+      currentIndex = 0;
+      score = 0;
+      answers = [];
+      renderQuestion();
+    });
+  }
+
+  function renderQuestion() {
+    const q = QUESTIONS[currentIndex];
+    const progress = ((currentIndex) / QUESTIONS.length) * 100;
+    app.innerHTML = `
+      <section class="panel fade-in">
+        <div class="progress-bar"><div class="progress-fill" style="width:${progress}%"></div></div>
+        <div class="q-header">
+          <span>Question ${currentIndex + 1} of ${QUESTIONS.length}</span>
+          <span class="section-tag">${q.section}</span>
+        </div>
+        <h2 class="question">${q.q}</h2>
+        <div class="options" id="options">
+          ${q.options.map((opt, i) => `
+            <button class="option" data-i="${i}">
+              <span class="letter">${String.fromCharCode(65 + i)}</span>
+              <span>${opt}</span>
+            </button>
+          `).join("")}
+        </div>
+        <div id="feedbackSlot"></div>
+        <div class="q-footer">
+          <span class="score-pill">Score: <b>${score}</b> / ${QUESTIONS.length}</span>
+          <button class="btn" id="nextBtn" style="display:none;">
+            ${currentIndex === QUESTIONS.length - 1 ? "See Results" : "Next Question"}
+          </button>
+        </div>
+      </section>
+    `;
+
+    document.querySelectorAll(".option").forEach(btn => {
+      btn.addEventListener("click", onAnswer);
+    });
+  }
+
+  function onAnswer(e) {
+    const btn = e.currentTarget;
+    const chosen = parseInt(btn.dataset.i, 10);
+    const q = QUESTIONS[currentIndex];
+    const isCorrect = chosen === q.answer;
+
+    if (isCorrect) score++;
+    answers.push({ q: q.q, chosen, correct: q.answer, isCorrect });
+
+    document.querySelectorAll(".option").forEach((b, i) => {
+      b.disabled = true;
+      if (i === q.answer) b.classList.add("correct");
+      else if (i === chosen) b.classList.add("wrong");
+      else b.classList.add("faded");
+    });
+
+    const fb = document.getElementById("feedbackSlot");
+    fb.innerHTML = `
+      <div class="feedback ${isCorrect ? "correct" : "wrong"} fade-in">
+        <span class="label">${isCorrect ? "Correct" : "Not quite"}</span>
+        ${q.explain}
+      </div>
+    `;
+
+    // Update progress + score
+    document.querySelector(".score-pill").innerHTML = `Score: <b>${score}</b> / ${QUESTIONS.length}`;
+    const progress = ((currentIndex + 1) / QUESTIONS.length) * 100;
+    document.querySelector(".progress-fill").style.width = progress + "%";
+
+    const next = document.getElementById("nextBtn");
+    next.style.display = "inline-block";
+    next.addEventListener("click", () => {
+      currentIndex++;
+      if (currentIndex >= QUESTIONS.length) renderResults();
+      else renderQuestion();
+    }, { once: true });
+  }
+
+  function renderResults() {
+    const pct = Math.round((score / QUESTIONS.length) * 100);
+    let title, blurb;
+    if (pct === 100) {
+      title = "Historian First Class";
+      blurb = "A perfect score. You could narrate the documentary yourself — every cause, consequence and treaty in its place.";
+    } else if (pct >= 80) {
+      title = "Front-Line Strategist";
+      blurb = "Excellent work. You have a strong grasp of how revolution in <i>one</i> country reshaped an entire continent's war.";
+    } else if (pct >= 60) {
+      title = "Officer of the General Staff";
+      blurb = "A solid showing. Review a few key dates and treaties and you'll command the topic fully.";
+    } else if (pct >= 40) {
+      title = "Conscript in Training";
+      blurb = "A fair start. Re-watch the sections on the <i>Treaty of Brest-Litovsk</i> and the <i>Spring Offensive</i> to lock in the cause-and-effect chain.";
+    } else {
+      title = "Back to the Briefing Room";
+      blurb = "Don't be discouraged — the events of 1917-1918 are dense. Revisit the documentary and try again. Pay close attention to dates and names.";
+    }
+
+    const breakdownHtml = answers.map((a, i) => `
+      <li>
+        <span class="mark ${a.isCorrect ? "ok" : "no"}">${a.isCorrect ? "&#10003;" : "&#10007;"}</span>
+        <span><b>Q${i + 1}.</b> ${a.q}</span>
+      </li>
+    `).join("");
+
+    app.innerHTML = `
+      <section class="panel result-screen fade-in">
+        <div class="seal">
+          <div class="score-num">${score}<small> / ${QUESTIONS.length}</small></div>
+        </div>
+        <h2 class="result-title">${title}</h2>
+        <p class="result-blurb">${blurb}</p>
+
+        <div class="breakdown">
+          <h3>&mdash; Your Answers &mdash;</h3>
+          <ul>${breakdownHtml}</ul>
+        </div>
+
+        <div class="actions">
+          <button class="btn" id="retryBtn">Try Again</button>
+          <button class="btn ghost" id="homeBtn">Back to Start</button>
+        </div>
+      </section>
+    `;
+
+    document.getElementById("retryBtn").addEventListener("click", () => {
+      currentIndex = 0;
+      score = 0;
+      answers = [];
+      renderQuestion();
+    });
+    document.getElementById("homeBtn").addEventListener("click", renderStart);
+  }
+
+  renderStart();
+</script>
+</body>
+</html>
