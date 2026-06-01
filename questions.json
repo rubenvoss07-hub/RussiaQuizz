@@ -1,0 +1,204 @@
+{
+  "_help": "Edit this file to change the quiz. 'correct' is the 1-based index of the right answer (1 = first option, 2 = second, 3 = third, 4 = fourth). 'options' can hold any number of choices (2 or more). Lines starting with an underscore are ignored by the quiz.",
+
+  "title": "Revolution & Collapse",
+  "subtitle": "A quiz on the fall of the Eastern Front and how it reshaped the war.",
+  "eyebrow": "The Great War — Topic 7",
+  "metaLine": "Historical Documentary ◆ 1917 – 1918 ◆ 15 Questions",
+  "footer": "— Based on the documentary script \"Revolution and Collapse\" —",
+
+  "intro": "In March 1917, strikes erupted in Petrograd. Within a year, an entire front of the Great War had vanished — and the strategic balance of the conflict shifted overnight.\n\nThis quiz tests what you remember from the documentary \"Revolution and Collapse\" — from the Tsar's abdication to the Treaty of Brest-Litovsk, and from the Kaiserschlacht to the armistice of November 1918.",
+
+  "startButton": "Begin the Quiz",
+
+  "resultTiers": [
+    { "minPercent": 100, "title": "Historian First Class", "blurb": "A perfect score. You could narrate the documentary yourself — every cause, consequence and treaty in its place." },
+    { "minPercent": 80,  "title": "Front-Line Strategist", "blurb": "Excellent work. You have a strong grasp of how revolution in one country reshaped an entire continent's war." },
+    { "minPercent": 60,  "title": "Officer of the General Staff", "blurb": "A solid showing. Review a few key dates and treaties and you'll command the topic fully." },
+    { "minPercent": 40,  "title": "Conscript in Training", "blurb": "A fair start. Re-watch the sections on the Treaty of Brest-Litovsk and the Spring Offensive to lock in the cause-and-effect chain." },
+    { "minPercent": 0,   "title": "Back to the Briefing Room", "blurb": "Don't be discouraged — the events of 1917-1918 are dense. Revisit the documentary and try again. Pay close attention to dates and names." }
+  ],
+
+  "questions": [
+    {
+      "section": "Section 2 — The Eastern Front",
+      "question": "Roughly how long was the Eastern Front battle line?",
+      "options": [
+        "About 200 kilometres",
+        "Over 1,000 kilometres",
+        "Around 500 kilometres",
+        "Less than 100 kilometres"
+      ],
+      "correct": 2,
+      "explanation": "The Eastern Front stretched over a thousand kilometres, from the Baltic Sea to the Black Sea — far longer than the Western Front."
+    },
+    {
+      "section": "Section 2 — The Eastern Front",
+      "question": "How did the Eastern Front differ from the Western Front in character?",
+      "options": [
+        "It was a static trench war just like the West",
+        "It was mostly a naval campaign",
+        "It was vast and mobile — armies advanced and retreated across huge distances",
+        "It was largely fought from the air"
+      ],
+      "correct": 3,
+      "explanation": "Unlike the deadlock of the West, the Eastern Front was vast and mobile, with no continuous wall of trenches."
+    },
+    {
+      "section": "Section 2 — The Eastern Front",
+      "question": "What was the state of the Russian army entering the war?",
+      "options": [
+        "The smallest but best equipped army in Europe",
+        "The largest army in the world, but badly supplied",
+        "A volunteer force trained by the British",
+        "Numerically weak but with superior artillery"
+      ],
+      "correct": 2,
+      "explanation": "Russia had the largest army in the world, but soldiers often lacked rifles, boots, and food. Poor leadership and weak industry produced massive casualties."
+    },
+    {
+      "section": "Section 3 — The Russian Revolution",
+      "question": "When did the February Revolution take place (by the modern calendar)?",
+      "options": [
+        "November 1916",
+        "January 1917",
+        "March 1917",
+        "May 1918"
+      ],
+      "correct": 3,
+      "explanation": "Although called the 'February Revolution' under the old Russian calendar, the protests in Petrograd broke out in March 1917."
+    },
+    {
+      "section": "Section 3 — The Russian Revolution",
+      "question": "What happened to Tsar Nicholas II during the February Revolution?",
+      "options": [
+        "He was assassinated immediately",
+        "He fled to Germany",
+        "He abdicated, ending three hundred years of Romanov rule",
+        "He led the army against the protesters"
+      ],
+      "correct": 3,
+      "explanation": "Within days of the protests, Nicholas II abdicated, ending 300 years of Romanov rule over Russia."
+    },
+    {
+      "section": "Section 3 — The Russian Revolution",
+      "question": "What fatal decision did the Provisional Government make?",
+      "options": [
+        "It immediately signed peace with Germany",
+        "It kept Russia in the war",
+        "It restored the Tsar to power",
+        "It declared war on Britain and France"
+      ],
+      "correct": 2,
+      "explanation": "The Provisional Government kept Russia in the war — the fighting and suffering continued, and so did the people's anger."
+    },
+    {
+      "section": "Section 3 — The Russian Revolution",
+      "question": "Who led the Bolsheviks?",
+      "options": [
+        "Joseph Stalin",
+        "Leon Trotsky",
+        "Tsar Nicholas II",
+        "Vladimir Lenin"
+      ],
+      "correct": 4,
+      "explanation": "Vladimir Lenin led the Bolsheviks and seized power in November 1917."
+    },
+    {
+      "section": "Section 3 — The Russian Revolution",
+      "question": "What was the simple, powerful Bolshevik slogan?",
+      "options": [
+        "Workers of the World, Unite!",
+        "Peace, Land, and Bread",
+        "Liberty, Equality, Fraternity",
+        "For Tsar and Country"
+      ],
+      "correct": 2,
+      "explanation": "Lenin's promise — 'Peace, Land, and Bread' — appealed to soldiers, peasants and workers exhausted by war and shortage."
+    },
+    {
+      "section": "Section 3 — The Russian Revolution",
+      "question": "When did the Bolsheviks seize power (by the modern calendar)?",
+      "options": [
+        "October 1917",
+        "November 1917",
+        "March 1918",
+        "July 1917"
+      ],
+      "correct": 2,
+      "explanation": "Although known as the October Revolution under the old calendar, the Bolshevik seizure of power happened in November 1917."
+    },
+    {
+      "section": "Section 3 — The Russian Revolution",
+      "question": "Which treaty took Russia out of the First World War?",
+      "options": [
+        "The Treaty of Versailles",
+        "The Treaty of Sèvres",
+        "The Treaty of Brest-Litovsk",
+        "The Treaty of Saint-Germain"
+      ],
+      "correct": 3,
+      "explanation": "In March 1918 the Bolsheviks signed the Treaty of Brest-Litovsk with Germany and the Central Powers, ending Russia's war."
+    },
+    {
+      "section": "Section 3 — The Russian Revolution",
+      "question": "Which territories did Russia surrender under Brest-Litovsk?",
+      "options": [
+        "Siberia, Mongolia and Crimea",
+        "Poland, Bohemia and Serbia",
+        "Ukraine, the Baltic states and Finland",
+        "Only a thin strip of land near Berlin"
+      ],
+      "correct": 3,
+      "explanation": "Russia surrendered enormous territory — Ukraine, the Baltic states, and Finland — losing a huge share of its population, farmland, and industry."
+    },
+    {
+      "section": "Section 4 — The Strategic Balance",
+      "question": "Roughly how many German divisions were transferred from the East to the Western Front after Russia's collapse?",
+      "options": [
+        "About 10 divisions",
+        "Around 50 divisions",
+        "Over 200 divisions",
+        "None — the troops stayed in Russia"
+      ],
+      "correct": 2,
+      "explanation": "Germany moved around fifty divisions — hundreds of thousands of soldiers — west, giving it for the first time a real numerical advantage."
+    },
+    {
+      "section": "Section 4 — The Strategic Balance",
+      "question": "What was the name of Germany's massive 1918 attack in the West?",
+      "options": [
+        "Operation Barbarossa",
+        "The Schlieffen Plan",
+        "The Ludendorff Retreat",
+        "The Spring Offensive (Kaiserschlacht)"
+      ],
+      "correct": 4,
+      "explanation": "In spring 1918 Germany launched the Kaiserschlacht — the 'Kaiser's Battle' — hoping to win before American troops arrived in force."
+    },
+    {
+      "section": "Section 4 — The Strategic Balance",
+      "question": "Why did the Spring Offensive ultimately fail?",
+      "options": [
+        "Germany ran out of ammunition before the first day",
+        "Russia rejoined the war on the Allied side",
+        "The army overstretched, supply lines failed, and fresh US troops arrived in France",
+        "Bad weather prevented any advance at all"
+      ],
+      "correct": 3,
+      "explanation": "The offensive overstretched the German army; supply lines couldn't keep up, soldiers were exhausted, and fresh American troops were pouring into France."
+    },
+    {
+      "section": "Section 5 — Significance",
+      "question": "What was the long-term political significance of the Russian Revolution?",
+      "options": [
+        "It restored the Romanov dynasty",
+        "It produced the world's first communist state — the Soviet Union",
+        "It ended communism forever in Europe",
+        "It united Russia with Germany permanently"
+      ],
+      "correct": 2,
+      "explanation": "The Revolution gave birth to the Soviet Union — the world's first communist state — which would shape global politics for the rest of the 20th century."
+    }
+  ]
+}

@@ -485,224 +485,155 @@
 <div class="wrap">
 
   <header class="hero">
-    <p class="eyebrow">The Great War &mdash; Topic 7</p>
-    <h1 class="title">Revolution &amp; Collapse</h1>
-    <p class="subtitle">A quiz on the fall of the Eastern Front and how it reshaped the war.</p>
-    <p class="meta">Historical Documentary <span class="dot">&#9670;</span> 1917 &ndash; 1918 <span class="dot">&#9670;</span> 15 Questions</p>
+    <p class="eyebrow" id="heroEyebrow">&nbsp;</p>
+    <h1 class="title" id="heroTitle">&nbsp;</h1>
+    <p class="subtitle" id="heroSubtitle">&nbsp;</p>
+    <p class="meta" id="heroMeta">&nbsp;</p>
   </header>
 
   <main id="app"></main>
 
-  <footer class="foot">&mdash; Based on the documentary script &ldquo;Revolution and Collapse&rdquo; &mdash;</footer>
+  <footer class="foot" id="footerText">&nbsp;</footer>
 </div>
 
 <script>
-  const QUESTIONS = [
-    {
-      section: "Section 2 — The Eastern Front",
-      q: "Roughly how long was the Eastern Front battle line?",
-      options: [
-        "About 200 kilometres",
-        "Over 1,000 kilometres",
-        "Around 500 kilometres",
-        "Less than 100 kilometres"
-      ],
-      answer: 1,
-      explain: "The Eastern Front stretched over a thousand kilometres, from the Baltic Sea to the Black Sea — far longer than the Western Front."
-    },
-    {
-      section: "Section 2 — The Eastern Front",
-      q: "How did the Eastern Front differ from the Western Front in character?",
-      options: [
-        "It was a static trench war just like the West",
-        "It was mostly a naval campaign",
-        "It was vast and mobile — armies advanced and retreated across huge distances",
-        "It was largely fought from the air"
-      ],
-      answer: 2,
-      explain: "Unlike the deadlock of the West, the Eastern Front was vast and mobile, with no continuous wall of trenches."
-    },
-    {
-      section: "Section 2 — The Eastern Front",
-      q: "What was the state of the Russian army entering the war?",
-      options: [
-        "The smallest but best equipped army in Europe",
-        "The largest army in the world, but badly supplied",
-        "A volunteer force trained by the British",
-        "Numerically weak but with superior artillery"
-      ],
-      answer: 1,
-      explain: "Russia had the largest army in the world, but soldiers often lacked rifles, boots, and food. Poor leadership and weak industry produced massive casualties."
-    },
-    {
-      section: "Section 3 — The Russian Revolution",
-      q: "When did the February Revolution take place (by the modern calendar)?",
-      options: [
-        "November 1916",
-        "January 1917",
-        "March 1917",
-        "May 1918"
-      ],
-      answer: 2,
-      explain: "Although called the 'February Revolution' under the old Russian calendar, the protests in Petrograd broke out in March 1917."
-    },
-    {
-      section: "Section 3 — The Russian Revolution",
-      q: "What happened to Tsar Nicholas II during the February Revolution?",
-      options: [
-        "He was assassinated immediately",
-        "He fled to Germany",
-        "He abdicated, ending three hundred years of Romanov rule",
-        "He led the army against the protesters"
-      ],
-      answer: 2,
-      explain: "Within days of the protests, Nicholas II abdicated, ending 300 years of Romanov rule over Russia."
-    },
-    {
-      section: "Section 3 — The Russian Revolution",
-      q: "What fatal decision did the Provisional Government make?",
-      options: [
-        "It immediately signed peace with Germany",
-        "It kept Russia in the war",
-        "It restored the Tsar to power",
-        "It declared war on Britain and France"
-      ],
-      answer: 1,
-      explain: "The Provisional Government kept Russia in the war — the fighting and suffering continued, and so did the people's anger."
-    },
-    {
-      section: "Section 3 — The Russian Revolution",
-      q: "Who led the Bolsheviks?",
-      options: [
-        "Joseph Stalin",
-        "Leon Trotsky",
-        "Tsar Nicholas II",
-        "Vladimir Lenin"
-      ],
-      answer: 3,
-      explain: "Vladimir Lenin led the Bolsheviks and seized power in November 1917."
-    },
-    {
-      section: "Section 3 — The Russian Revolution",
-      q: "What was the simple, powerful Bolshevik slogan?",
-      options: [
-        "Workers of the World, Unite!",
-        "Peace, Land, and Bread",
-        "Liberty, Equality, Fraternity",
-        "For Tsar and Country"
-      ],
-      answer: 1,
-      explain: "Lenin's promise — 'Peace, Land, and Bread' — appealed to soldiers, peasants and workers exhausted by war and shortage."
-    },
-    {
-      section: "Section 3 — The Russian Revolution",
-      q: "When did the Bolsheviks seize power (by the modern calendar)?",
-      options: [
-        "October 1917",
-        "November 1917",
-        "March 1918",
-        "July 1917"
-      ],
-      answer: 1,
-      explain: "Although known as the October Revolution under the old calendar, the Bolshevik seizure of power happened in November 1917."
-    },
-    {
-      section: "Section 3 — The Russian Revolution",
-      q: "Which treaty took Russia out of the First World War?",
-      options: [
-        "The Treaty of Versailles",
-        "The Treaty of Sèvres",
-        "The Treaty of Brest-Litovsk",
-        "The Treaty of Saint-Germain"
-      ],
-      answer: 2,
-      explain: "In March 1918 the Bolsheviks signed the Treaty of Brest-Litovsk with Germany and the Central Powers, ending Russia's war."
-    },
-    {
-      section: "Section 3 — The Russian Revolution",
-      q: "Which territories did Russia surrender under Brest-Litovsk?",
-      options: [
-        "Siberia, Mongolia and Crimea",
-        "Poland, Bohemia and Serbia",
-        "Ukraine, the Baltic states and Finland",
-        "Only a thin strip of land near Berlin"
-      ],
-      answer: 2,
-      explain: "Russia surrendered enormous territory — Ukraine, the Baltic states, and Finland — losing a huge share of its population, farmland, and industry."
-    },
-    {
-      section: "Section 4 — The Strategic Balance",
-      q: "Roughly how many German divisions were transferred from the East to the Western Front after Russia's collapse?",
-      options: [
-        "About 10 divisions",
-        "Around 50 divisions",
-        "Over 200 divisions",
-        "None — the troops stayed in Russia"
-      ],
-      answer: 1,
-      explain: "Germany moved around fifty divisions — hundreds of thousands of soldiers — west, giving it for the first time a real numerical advantage."
-    },
-    {
-      section: "Section 4 — The Strategic Balance",
-      q: "What was the name of Germany's massive 1918 attack in the West?",
-      options: [
-        "Operation Barbarossa",
-        "The Schlieffen Plan",
-        "The Ludendorff Retreat",
-        "The Spring Offensive (Kaiserschlacht)"
-      ],
-      answer: 3,
-      explain: "In spring 1918 Germany launched the Kaiserschlacht — the 'Kaiser's Battle' — hoping to win before American troops arrived in force."
-    },
-    {
-      section: "Section 4 — The Strategic Balance",
-      q: "Why did the Spring Offensive ultimately fail?",
-      options: [
-        "Germany ran out of ammunition before the first day",
-        "Russia rejoined the war on the Allied side",
-        "The army overstretched, supply lines failed, and fresh US troops arrived in France",
-        "Bad weather prevented any advance at all"
-      ],
-      answer: 2,
-      explain: "The offensive overstretched the German army; supply lines couldn't keep up, soldiers were exhausted, and fresh American troops were pouring into France."
-    },
-    {
-      section: "Section 5 — Significance",
-      q: "What was the long-term political significance of the Russian Revolution?",
-      options: [
-        "It restored the Romanov dynasty",
-        "It produced the world's first communist state — the Soviet Union",
-        "It ended communism forever in Europe",
-        "It united Russia with Germany permanently"
-      ],
-      answer: 1,
-      explain: "The Revolution gave birth to the Soviet Union — the world's first communist state — which would shape global politics for the rest of the 20th century."
-    }
-  ];
+  // ============================================================
+  //  Quiz engine — questions are loaded from ./questions.json
+  //  Edit that file to change the quiz; you do not need to touch
+  //  this HTML to add, remove, or rewrite questions.
+  // ============================================================
 
+  const QUESTIONS_URL = "questions.json";
   const app = document.getElementById("app");
+  const FALLBACK = { title: "Quiz", subtitle: "", eyebrow: "", metaLine: "", footer: "", intro: "", startButton: "Begin", resultTiers: [], questions: [] };
+  let CONFIG = { ...FALLBACK };
   let currentIndex = 0;
   let score = 0;
   let answers = [];
 
+  function escapeHtml(str) {
+    return String(str ?? "")
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+  function nl2br(str) {
+    return escapeHtml(str).replace(/\n/g, "<br>");
+  }
+
+  function setHeader(cfg) {
+    document.getElementById("heroEyebrow").innerHTML  = escapeHtml(cfg.eyebrow || "");
+    document.getElementById("heroTitle").innerHTML    = escapeHtml(cfg.title || "Quiz");
+    document.getElementById("heroSubtitle").innerHTML = escapeHtml(cfg.subtitle || "");
+    const meta = cfg.metaLine || "";
+    document.getElementById("heroMeta").innerHTML     = escapeHtml(meta).replace(/◆/g, '<span class="dot">&#9670;</span>');
+    document.getElementById("footerText").innerHTML   = escapeHtml(cfg.footer || "");
+    document.title = (cfg.title || "Quiz") + " — Quiz";
+  }
+
+  // ---------- Loader ----------
+
+  async function loadQuiz() {
+    renderLoading();
+    try {
+      const res = await fetch(QUESTIONS_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error(`Could not fetch ${QUESTIONS_URL} — server returned HTTP ${res.status}.`);
+      const data = await res.json();
+      validate(data);
+      CONFIG = { ...FALLBACK, ...data };
+      setHeader(CONFIG);
+      renderStart();
+    } catch (err) {
+      renderError(err);
+    }
+  }
+
+  function validate(data) {
+    if (!data || typeof data !== "object") throw new Error("questions.json must be a JSON object.");
+    if (!Array.isArray(data.questions) || data.questions.length === 0) {
+      throw new Error("'questions' must be a non-empty array.");
+    }
+    data.questions.forEach((q, i) => {
+      const tag = `Question ${i + 1}`;
+      if (!q.question || typeof q.question !== "string") throw new Error(`${tag}: 'question' is required and must be a string.`);
+      if (!Array.isArray(q.options) || q.options.length < 2) throw new Error(`${tag}: 'options' must have at least 2 entries.`);
+      if (typeof q.correct !== "number" || !Number.isInteger(q.correct) || q.correct < 1 || q.correct > q.options.length) {
+        throw new Error(`${tag}: 'correct' must be an integer between 1 and ${q.options.length} (1 = first option).`);
+      }
+    });
+    if (data.resultTiers && !Array.isArray(data.resultTiers)) {
+      throw new Error("'resultTiers' must be an array (or omitted).");
+    }
+  }
+
   // ---------- Screens ----------
 
+  function renderLoading() {
+    app.innerHTML = `
+      <section class="panel fade-in" style="text-align:center;">
+        <p class="intro" style="margin:0;">Loading quiz…</p>
+      </section>
+    `;
+  }
+
+  function renderError(err) {
+    app.innerHTML = `
+      <section class="panel result-screen fade-in">
+        <h2 class="result-title">Couldn't load the quiz</h2>
+        <p class="result-blurb"><b>${escapeHtml(err.message)}</b></p>
+
+        <div class="breakdown">
+          <h3>&mdash; How to fix &mdash;</h3>
+          <ul style="display:block;">
+            <li style="display:list-item;">
+              <b>Open via a web server, not <code>file://</code>.</b>
+              Browsers block local <code>fetch()</code> for security.
+              Either push the folder to GitHub and turn on <i>Pages</i>,
+              or from the project folder run<br>
+              <code>python3 -m http.server</code><br>
+              and open <code>http://localhost:8000</code>.
+            </li>
+            <li style="display:list-item;">
+              <b>Make sure <code>questions.json</code> sits next to <code>index.html</code></b>
+              (same folder, same case).
+            </li>
+            <li style="display:list-item;">
+              <b>Check JSON syntax.</b> No trailing commas, every string in double quotes.
+              Paste it into <code>jsonlint.com</code> if unsure.
+            </li>
+            <li style="display:list-item;">
+              <b>Each question needs</b> <code>question</code>, <code>options</code> (≥2),
+              <code>correct</code> (1-based index), and <code>explanation</code>.
+            </li>
+          </ul>
+        </div>
+
+        <div class="actions">
+          <button class="btn" id="retryLoad">Retry</button>
+        </div>
+      </section>
+    `;
+    document.getElementById("retryLoad").addEventListener("click", loadQuiz);
+  }
+
+  function uniqueSectionCount() {
+    return new Set(CONFIG.questions.map(q => q.section).filter(Boolean)).size || 1;
+  }
+  function estMinutes() {
+    return Math.max(1, Math.round(CONFIG.questions.length * 0.33));
+  }
+
   function renderStart() {
+    const qN = CONFIG.questions.length;
     app.innerHTML = `
       <section class="panel start-screen fade-in">
-        <p class="intro">
-          In March 1917, strikes erupted in Petrograd. Within a year, an entire front of the Great War had vanished — and the strategic balance of the conflict shifted overnight.
-          <br><br>
-          This quiz tests what you remember from the documentary <strong>&ldquo;Revolution and Collapse&rdquo;</strong> &mdash;
-          from the Tsar's abdication to the Treaty of Brest-Litovsk, and from the Kaiserschlacht to the armistice of November 1918.
-        </p>
+        <p class="intro">${nl2br(CONFIG.intro)}</p>
         <div class="stats-row">
-          <div class="stat"><span class="num">15</span><span class="lbl">Questions</span></div>
-          <div class="stat"><span class="num">5</span><span class="lbl">Sections</span></div>
-          <div class="stat"><span class="num">~5</span><span class="lbl">Minutes</span></div>
+          <div class="stat"><span class="num">${qN}</span><span class="lbl">Questions</span></div>
+          <div class="stat"><span class="num">${uniqueSectionCount()}</span><span class="lbl">Sections</span></div>
+          <div class="stat"><span class="num">~${estMinutes()}</span><span class="lbl">Minutes</span></div>
         </div>
         <div class="center">
-          <button class="btn" id="startBtn">Begin the Quiz</button>
+          <button class="btn" id="startBtn">${escapeHtml(CONFIG.startButton || "Begin")}</button>
         </div>
       </section>
     `;
@@ -715,43 +646,53 @@
   }
 
   function renderQuestion() {
-    const q = QUESTIONS[currentIndex];
-    const progress = ((currentIndex) / QUESTIONS.length) * 100;
+    const raw = CONFIG.questions[currentIndex];
+    // Normalise: convert 1-based 'correct' to 0-based 'answer'
+    const q = {
+      section: raw.section || "",
+      q: raw.question,
+      options: raw.options,
+      answer: raw.correct - 1,
+      explain: raw.explanation || ""
+    };
+    const total = CONFIG.questions.length;
+    const progress = (currentIndex / total) * 100;
+
     app.innerHTML = `
       <section class="panel fade-in">
         <div class="progress-bar"><div class="progress-fill" style="width:${progress}%"></div></div>
         <div class="q-header">
-          <span>Question ${currentIndex + 1} of ${QUESTIONS.length}</span>
-          <span class="section-tag">${q.section}</span>
+          <span>Question ${currentIndex + 1} of ${total}</span>
+          <span class="section-tag">${escapeHtml(q.section)}</span>
         </div>
-        <h2 class="question">${q.q}</h2>
+        <h2 class="question">${escapeHtml(q.q)}</h2>
         <div class="options" id="options">
           ${q.options.map((opt, i) => `
             <button class="option" data-i="${i}">
               <span class="letter">${String.fromCharCode(65 + i)}</span>
-              <span>${opt}</span>
+              <span>${escapeHtml(opt)}</span>
             </button>
           `).join("")}
         </div>
         <div id="feedbackSlot"></div>
         <div class="q-footer">
-          <span class="score-pill">Score: <b>${score}</b> / ${QUESTIONS.length}</span>
+          <span class="score-pill">Score: <b>${score}</b> / ${total}</span>
           <button class="btn" id="nextBtn" style="display:none;">
-            ${currentIndex === QUESTIONS.length - 1 ? "See Results" : "Next Question"}
+            ${currentIndex === total - 1 ? "See Results" : "Next Question"}
           </button>
         </div>
       </section>
     `;
 
     document.querySelectorAll(".option").forEach(btn => {
-      btn.addEventListener("click", onAnswer);
+      btn.addEventListener("click", (e) => onAnswer(e, q));
     });
   }
 
-  function onAnswer(e) {
+  function onAnswer(e, q) {
     const btn = e.currentTarget;
     const chosen = parseInt(btn.dataset.i, 10);
-    const q = QUESTIONS[currentIndex];
+    const total = CONFIG.questions.length;
     const isCorrect = chosen === q.answer;
 
     if (isCorrect) score++;
@@ -764,62 +705,51 @@
       else b.classList.add("faded");
     });
 
-    const fb = document.getElementById("feedbackSlot");
-    fb.innerHTML = `
+    document.getElementById("feedbackSlot").innerHTML = `
       <div class="feedback ${isCorrect ? "correct" : "wrong"} fade-in">
         <span class="label">${isCorrect ? "Correct" : "Not quite"}</span>
-        ${q.explain}
+        ${escapeHtml(q.explain)}
       </div>
     `;
 
-    // Update progress + score
-    document.querySelector(".score-pill").innerHTML = `Score: <b>${score}</b> / ${QUESTIONS.length}`;
-    const progress = ((currentIndex + 1) / QUESTIONS.length) * 100;
-    document.querySelector(".progress-fill").style.width = progress + "%";
+    document.querySelector(".score-pill").innerHTML = `Score: <b>${score}</b> / ${total}`;
+    document.querySelector(".progress-fill").style.width =
+      (((currentIndex + 1) / total) * 100) + "%";
 
     const next = document.getElementById("nextBtn");
     next.style.display = "inline-block";
     next.addEventListener("click", () => {
       currentIndex++;
-      if (currentIndex >= QUESTIONS.length) renderResults();
+      if (currentIndex >= total) renderResults();
       else renderQuestion();
     }, { once: true });
   }
 
+  function pickTier(pct) {
+    const tiers = (CONFIG.resultTiers || []).slice().sort((a, b) => b.minPercent - a.minPercent);
+    for (const t of tiers) if (pct >= t.minPercent) return t;
+    return { title: `${score} / ${CONFIG.questions.length}`, blurb: "" };
+  }
+
   function renderResults() {
-    const pct = Math.round((score / QUESTIONS.length) * 100);
-    let title, blurb;
-    if (pct === 100) {
-      title = "Historian First Class";
-      blurb = "A perfect score. You could narrate the documentary yourself — every cause, consequence and treaty in its place.";
-    } else if (pct >= 80) {
-      title = "Front-Line Strategist";
-      blurb = "Excellent work. You have a strong grasp of how revolution in <i>one</i> country reshaped an entire continent's war.";
-    } else if (pct >= 60) {
-      title = "Officer of the General Staff";
-      blurb = "A solid showing. Review a few key dates and treaties and you'll command the topic fully.";
-    } else if (pct >= 40) {
-      title = "Conscript in Training";
-      blurb = "A fair start. Re-watch the sections on the <i>Treaty of Brest-Litovsk</i> and the <i>Spring Offensive</i> to lock in the cause-and-effect chain.";
-    } else {
-      title = "Back to the Briefing Room";
-      blurb = "Don't be discouraged — the events of 1917-1918 are dense. Revisit the documentary and try again. Pay close attention to dates and names.";
-    }
+    const total = CONFIG.questions.length;
+    const pct = Math.round((score / total) * 100);
+    const tier = pickTier(pct);
 
     const breakdownHtml = answers.map((a, i) => `
       <li>
         <span class="mark ${a.isCorrect ? "ok" : "no"}">${a.isCorrect ? "&#10003;" : "&#10007;"}</span>
-        <span><b>Q${i + 1}.</b> ${a.q}</span>
+        <span><b>Q${i + 1}.</b> ${escapeHtml(a.q)}</span>
       </li>
     `).join("");
 
     app.innerHTML = `
       <section class="panel result-screen fade-in">
         <div class="seal">
-          <div class="score-num">${score}<small> / ${QUESTIONS.length}</small></div>
+          <div class="score-num">${score}<small> / ${total}</small></div>
         </div>
-        <h2 class="result-title">${title}</h2>
-        <p class="result-blurb">${blurb}</p>
+        <h2 class="result-title">${escapeHtml(tier.title)}</h2>
+        <p class="result-blurb">${escapeHtml(tier.blurb)}</p>
 
         <div class="breakdown">
           <h3>&mdash; Your Answers &mdash;</h3>
@@ -842,7 +772,7 @@
     document.getElementById("homeBtn").addEventListener("click", renderStart);
   }
 
-  renderStart();
+  loadQuiz();
 </script>
 </body>
 </html>
