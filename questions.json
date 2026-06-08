@@ -2,21 +2,21 @@
   "_help": "Edit this file to change the quiz. 'correct' is the 1-based index of the right answer (1 = first option, 2 = second, 3 = third, 4 = fourth). 'options' can hold any number of choices (2 or more). Lines starting with an underscore are ignored by the quiz.",
 
   "title": "Revolution & Collapse",
-  "subtitle": "A quiz on the fall of the Eastern Front and how it reshaped the war.",
-  "eyebrow": "The Great War — Topic 7",
-  "metaLine": "Historical Documentary ◆ 1917 – 1918 ◆ 15 Questions",
-  "footer": "— Based on the documentary script \"Revolution and Collapse\" —",
+  "subtitle": "",
+  "eyebrow": "",
+  "metaLine": "",
+  "footer": "",
 
-  "intro": "In March 1917, strikes erupted in Petrograd. Within a year, an entire front of the Great War had vanished — and the strategic balance of the conflict shifted overnight.\n\nThis quiz tests what you remember from the documentary \"Revolution and Collapse\" — from the Tsar's abdication to the Treaty of Brest-Litovsk, and from the Kaiserschlacht to the armistice of November 1918.",
+  "intro": "",
 
   "startButton": "Begin the Quiz",
 
   "resultTiers": [
-    { "minPercent": 100, "title": "Historian First Class", "blurb": "A perfect score. You could narrate the documentary yourself — every cause, consequence and treaty in its place." },
-    { "minPercent": 80,  "title": "Front-Line Strategist", "blurb": "Excellent work. You have a strong grasp of how revolution in one country reshaped an entire continent's war." },
-    { "minPercent": 60,  "title": "Officer of the General Staff", "blurb": "A solid showing. Review a few key dates and treaties and you'll command the topic fully." },
-    { "minPercent": 40,  "title": "Conscript in Training", "blurb": "A fair start. Re-watch the sections on the Treaty of Brest-Litovsk and the Spring Offensive to lock in the cause-and-effect chain." },
-    { "minPercent": 0,   "title": "Back to the Briefing Room", "blurb": "Don't be discouraged — the events of 1917-1918 are dense. Revisit the documentary and try again. Pay close attention to dates and names." }
+    { "minPercent": 100, "title": "",
+    { "minPercent": 80,  "title": "",
+    { "minPercent": 60,  "title": "",
+    { "minPercent": 40,  "title": "",
+    { "minPercent": 0,   "title": ""
   ],
 
   "questions": [
