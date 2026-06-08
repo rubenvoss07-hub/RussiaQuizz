@@ -16,9 +16,8 @@
     { "minPercent": 80,  "title": "",
     { "minPercent": 60,  "title": "",
     { "minPercent": 40,  "title": "",
-    { "minPercent": 0,   "title": "",
-     ],
-
+    { "minPercent": 0,   "title": ""
+      ],
   "questions": [
     {
       "section": "Section 2 — The Eastern Front",
