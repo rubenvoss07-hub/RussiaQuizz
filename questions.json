@@ -2,21 +2,21 @@
   "_help": "Edit this file to change the quiz. 'correct' is the 1-based index of the right answer (1 = first option, 2 = second, 3 = third, 4 = fourth). 'options' can hold any number of choices (2 or more). Lines starting with an underscore are ignored by the quiz.",
 
   "title": "Revolution & Collapse",
-  "subtitle": "",
+  "subtitle": "Russia and the First World War",
   "eyebrow": "",
   "metaLine": "",
   "footer": "",
 
-  "intro": "",
+  "intro": "Fifteen questions on Russia's collapse during the First World War, from the Eastern Front to the revolution that pulled it out of the fighting. Choose an answer to see what happened and why.",
 
   "startButton": "Begin the Quiz",
 
   "resultTiers": [
-    { "minPercent": 100, "title": "" },
-    { "minPercent": 80,  "title": "" },
-    { "minPercent": 60,  "title": "" },
-    { "minPercent": 40,  "title": "" },
-    { "minPercent": 0,   "title": "" }
+    { "minPercent": 100, "title": "Full marks", "blurb": "Every answer correct. You know this story inside out." },
+    { "minPercent": 80,  "title": "Strong result", "blurb": "A firm grasp of how Russia fell out of the war." },
+    { "minPercent": 60,  "title": "Solid effort", "blurb": "A good foundation, with a few details worth revisiting." },
+    { "minPercent": 40,  "title": "Worth a review", "blurb": "Go back over the revolution and what it set in motion." },
+    { "minPercent": 0,   "title": "Time to revisit", "blurb": "Watch the documentary again and give it another go." }
   ],
   "questions": [
     {
@@ -53,7 +53,7 @@
         "Numerically weak but with superior artillery"
       ],
       "correct": 2,
-      "explanation": "Russia had the largest army in the world, but soldiers often lacked rifles, boots, and food. Poor leadership and weak industry produced massive casualties."
+      "explanation": "Russia fielded the largest army in the world, yet many soldiers went into battle without proper weapons or supplies. Poor leadership and weak industry led to massive casualties."
     },
     {
       "section": "Section 3 — The Russian Revolution",
@@ -89,7 +89,7 @@
         "It declared war on Britain and France"
       ],
       "correct": 2,
-      "explanation": "The Provisional Government kept Russia in the war — the fighting and suffering continued, and so did the people's anger."
+      "explanation": "The Provisional Government kept Russia in the war. The fighting dragged on, and so did the people's anger."
     },
     {
       "section": "Section 3 — The Russian Revolution",
@@ -113,7 +113,7 @@
         "For Tsar and Country"
       ],
       "correct": 2,
-      "explanation": "Lenin's promise — 'Peace, Land, and Bread' — appealed to soldiers, peasants and workers exhausted by war and shortage."
+      "explanation": "Lenin's promise of 'Peace, Land, and Bread' spoke directly to a population worn down by war and shortage."
     },
     {
       "section": "Section 3 — The Russian Revolution",
@@ -149,7 +149,7 @@
         "Only a thin strip of land near Berlin"
       ],
       "correct": 3,
-      "explanation": "Russia surrendered enormous territory — Ukraine, the Baltic states, and Finland — losing a huge share of its population, farmland, and industry."
+      "explanation": "Russia gave up an enormous stretch of territory — Ukraine, the Baltic states and Finland — along with much of its population and farmland."
     },
     {
       "section": "Section 4 — The Strategic Balance",
@@ -161,7 +161,7 @@
         "None — the troops stayed in Russia"
       ],
       "correct": 2,
-      "explanation": "Germany moved around fifty divisions — hundreds of thousands of soldiers — west, giving it for the first time a real numerical advantage."
+      "explanation": "Germany moved around fifty divisions — hundreds of thousands of soldiers — west, gaining a real numerical advantage for the first time."
     },
     {
       "section": "Section 4 — The Strategic Balance",
@@ -185,7 +185,7 @@
         "Bad weather prevented any advance at all"
       ],
       "correct": 3,
-      "explanation": "The offensive overstretched the German army; supply lines couldn't keep up, soldiers were exhausted, and fresh American troops were pouring into France."
+      "explanation": "The offensive overstretched the German army — supply lines could not keep up with the advance, and fresh American troops were arriving in France."
     },
     {
       "section": "Section 5 — Significance",
