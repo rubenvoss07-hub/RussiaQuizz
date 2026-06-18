@@ -135,35 +135,26 @@
   }
   .intro strong { color: var(--ink); }
 
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin: 28px 0;
-  }
-  .stat {
+  /* Decorative divider: — ✦ — */
+  .ornament {
     text-align: center;
-    padding: 16px 8px;
-    background: rgba(255, 255, 255, 0.25);
-    border: 1px solid rgba(138, 122, 94, 0.3);
-    border-radius: 3px;
+    color: var(--accent-2);
+    font-size: 15px;
+    margin: 26px 0 28px;
+    line-height: 1;
   }
-  .stat .num {
-    font-family: 'Cinzel', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--accent);
-    display: block;
-    line-height: 1.1;
+  .ornament::before,
+  .ornament::after {
+    content: "";
+    display: inline-block;
+    width: 64px;
+    height: 1px;
+    vertical-align: middle;
+    margin: 0 16px;
+    background: linear-gradient(90deg, transparent, var(--line));
   }
-  .stat .lbl {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--ink-mute);
-    text-transform: uppercase;
-    margin-top: 6px;
-    display: block;
+  .ornament::after {
+    background: linear-gradient(90deg, var(--line), transparent);
   }
 
   /* --- Buttons --- */
@@ -202,6 +193,13 @@
     color: #6a1414;
   }
   .center { text-align: center; }
+
+  /* Clear, on-theme focus ring for keyboard users */
+  .btn:focus-visible,
+  .option:focus-visible {
+    outline: 2px solid var(--accent-2);
+    outline-offset: 2px;
+  }
 
   /* --- Question screen --- */
   .progress-bar {
@@ -474,7 +472,6 @@
 
   @media (max-width: 540px) {
     .wrap { padding: 20px 14px 60px; }
-    .stats-row { grid-template-columns: 1fr; }
     .panel { padding: 24px 18px; }
     .actions { flex-direction: column; }
     .actions .btn { width: 100%; }
@@ -520,13 +517,20 @@
     return escapeHtml(str).replace(/\n/g, "<br>");
   }
 
+  // Set an element's content, and hide it entirely when there's nothing to show
+  // (keeps the header clean instead of leaving empty placeholder lines).
+  function setLine(id, html) {
+    const el = document.getElementById(id);
+    el.innerHTML = html;
+    el.style.display = html.trim() ? "" : "none";
+  }
+
   function setHeader(cfg) {
-    document.getElementById("heroEyebrow").innerHTML  = escapeHtml(cfg.eyebrow || "");
-    document.getElementById("heroTitle").innerHTML    = escapeHtml(cfg.title || "Quiz");
-    document.getElementById("heroSubtitle").innerHTML = escapeHtml(cfg.subtitle || "");
-    const meta = cfg.metaLine || "";
-    document.getElementById("heroMeta").innerHTML     = escapeHtml(meta).replace(/◆/g, '<span class="dot">&#9670;</span>');
-    document.getElementById("footerText").innerHTML   = escapeHtml(cfg.footer || "");
+    setLine("heroEyebrow",  escapeHtml(cfg.eyebrow || ""));
+    setLine("heroTitle",    escapeHtml(cfg.title || "Quiz"));
+    setLine("heroSubtitle", escapeHtml(cfg.subtitle || ""));
+    setLine("heroMeta",     escapeHtml(cfg.metaLine || "").replace(/◆/g, '<span class="dot">&#9670;</span>'));
+    setLine("footerText",   escapeHtml(cfg.footer || ""));
     document.title = (cfg.title || "Quiz") + " — Quiz";
   }
 
@@ -615,23 +619,11 @@
     document.getElementById("retryLoad").addEventListener("click", loadQuiz);
   }
 
-  function uniqueSectionCount() {
-    return new Set(CONFIG.questions.map(q => q.section).filter(Boolean)).size || 1;
-  }
-  function estMinutes() {
-    return Math.max(1, Math.round(CONFIG.questions.length * 0.33));
-  }
-
   function renderStart() {
-    const qN = CONFIG.questions.length;
     app.innerHTML = `
       <section class="panel start-screen fade-in">
-        <p class="intro">${nl2br(CONFIG.intro)}</p>
-        <div class="stats-row">
-          <div class="stat"><span class="num">${qN}</span><span class="lbl">Questions</span></div>
-          <div class="stat"><span class="num">${uniqueSectionCount()}</span><span class="lbl">Sections</span></div>
-          <div class="stat"><span class="num">~${estMinutes()}</span><span class="lbl">Minutes</span></div>
-        </div>
+        ${CONFIG.intro ? `<p class="intro">${nl2br(CONFIG.intro)}</p>` : ""}
+        <div class="ornament" aria-hidden="true">&#10022;</div>
         <div class="center">
           <button class="btn" id="startBtn">${escapeHtml(CONFIG.startButton || "Begin")}</button>
         </div>
