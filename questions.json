@@ -7,7 +7,7 @@
   "metaLine": "",
   "footer": "",
 
-  "intro": "Fifteen questions on Russia's collapse during the First World War, from the Eastern Front to the revolution that pulled it out of the fighting. Choose an answer to see what happened and why.",
+  "intro": "A quiz on Russia's collapse during the First World War, from the strain of the Eastern Front to the revolution that pulled it out of the fighting. Choose an answer to see what happened and why.",
 
   "startButton": "Begin the Quiz",
 
@@ -20,184 +20,158 @@
   ],
   "questions": [
     {
-      "section": "Section 2 — The Eastern Front",
-      "question": "Roughly how long was the Eastern Front battle line?",
+      "question": "Why was Russia exhausted by 1917?",
       "options": [
-        "About 200 kilometres",
-        "Over 1,000 kilometres",
-        "Around 500 kilometres",
-        "Less than 100 kilometres"
-      ],
-      "correct": 2,
-      "explanation": "The Eastern Front stretched over a thousand kilometres, from the Baltic Sea to the Black Sea — far longer than the Western Front."
-    },
-    {
-      "section": "Section 2 — The Eastern Front",
-      "question": "How did the Eastern Front differ from the Western Front in character?",
-      "options": [
-        "It was a static trench war just like the West",
-        "It was mostly a naval campaign",
-        "It was vast and mobile — armies advanced and retreated across huge distances",
-        "It was largely fought from the air"
+        "A volcanic eruption destroyed their farmland",
+        "Russia had lost a war against Japan",
+        "Three years of war had devastated the country",
+        "Russia lost a lot of land"
       ],
       "correct": 3,
-      "explanation": "Unlike the deadlock of the West, the Eastern Front was vast and mobile, with no continuous wall of trenches."
+      "explanation": "By 1917 Russia had been at war for nearly three years, and the strain had worn the country down."
     },
     {
-      "section": "Section 2 — The Eastern Front",
-      "question": "What was the state of the Russian army entering the war?",
+      "question": "What did peasants in Russia face in WWI?",
       "options": [
-        "The smallest but best equipped army in Europe",
-        "The largest army in the world, but badly supplied",
-        "A volunteer force trained by the British",
-        "Numerically weak but with superior artillery"
+        "No education and healthcare",
+        "Severe food shortages and poverty",
+        "No political freedom",
+        "Rapid economic growth"
       ],
       "correct": 2,
-      "explanation": "Russia fielded the largest army in the world, yet many soldiers went into battle without proper weapons or supplies. Poor leadership and weak industry led to massive casualties."
+      "explanation": "For ordinary Russians the war meant hunger and deepening poverty at home."
     },
     {
-      "section": "Section 3 — The Russian Revolution",
-      "question": "When did the February Revolution take place (by the modern calendar)?",
+      "question": "Why had Tsar Nicholas lost the trust of his people?",
       "options": [
-        "November 1916",
-        "January 1917",
-        "March 1917",
-        "May 1918"
-      ],
-      "correct": 3,
-      "explanation": "Although called the 'February Revolution' under the old Russian calendar, the protests in Petrograd broke out in March 1917."
-    },
-    {
-      "section": "Section 3 — The Russian Revolution",
-      "question": "What happened to Tsar Nicholas II during the February Revolution?",
-      "options": [
-        "He was assassinated immediately",
-        "He fled to Germany",
-        "He abdicated, ending three hundred years of Romanov rule",
-        "He led the army against the protesters"
-      ],
-      "correct": 3,
-      "explanation": "Within days of the protests, Nicholas II abdicated, ending 300 years of Romanov rule over Russia."
-    },
-    {
-      "section": "Section 3 — The Russian Revolution",
-      "question": "What fatal decision did the Provisional Government make?",
-      "options": [
-        "It immediately signed peace with Germany",
-        "It kept Russia in the war",
-        "It restored the Tsar to power",
-        "It declared war on Britain and France"
+        "He had converted to a different religion",
+        "He was seen as weak and unable to solve problems",
+        "He raised taxes",
+        "He made peace with Germany too early"
       ],
       "correct": 2,
-      "explanation": "The Provisional Government kept Russia in the war. The fighting dragged on, and so did the people's anger."
+      "explanation": "Nicholas II came to be seen as weak and incapable of fixing the country's problems, and support for him drained away."
     },
     {
-      "section": "Section 3 — The Russian Revolution",
-      "question": "Who led the Bolsheviks?",
+      "question": "Where did the February Revolution protests begin?",
       "options": [
-        "Joseph Stalin",
-        "Leon Trotsky",
-        "Tsar Nicholas II",
-        "Vladimir Lenin"
+        "Moscow",
+        "Kiev",
+        "Stalingrad",
+        "Petrograd"
       ],
       "correct": 4,
-      "explanation": "Vladimir Lenin led the Bolsheviks and seized power in November 1917."
+      "explanation": "The protests began in the capital, Petrograd (today's St Petersburg)."
     },
     {
-      "section": "Section 3 — The Russian Revolution",
-      "question": "What was the simple, powerful Bolshevik slogan?",
+      "question": "What did the soldiers do during the February Revolution?",
       "options": [
-        "Workers of the World, Unite!",
-        "Peace, Land, and Bread",
-        "Liberty, Equality, Fraternity",
-        "For Tsar and Country"
+        "They refused to fire and joined the crowds",
+        "They arrested the protest leaders",
+        "They fired on the protesting people",
+        "They left Russia"
+      ],
+      "correct": 1,
+      "explanation": "Ordered to put down the protests, the soldiers refused to fire and joined the crowds instead — the turning point of the revolution."
+    },
+    {
+      "question": "What does \"abdicate\" mean?",
+      "options": [
+        "To declare war",
+        "To sign a peace treaty",
+        "To give up the throne",
+        "To move to a new country"
+      ],
+      "correct": 3,
+      "explanation": "To abdicate means to give up the throne, which is what Nicholas II did."
+    },
+    {
+      "question": "Which fatal mistake did the Provisional Government make?",
+      "options": [
+        "It banned political freedom",
+        "It chose to continue the war",
+        "It arrested Lenin immediately",
+        "It gave land to the peasants"
       ],
       "correct": 2,
-      "explanation": "Lenin's promise of 'Peace, Land, and Bread' spoke directly to a population worn down by war and shortage."
+      "explanation": "The Provisional Government chose to keep fighting, and the hardship of the war kept public anger alive."
     },
     {
-      "section": "Section 3 — The Russian Revolution",
-      "question": "When did the Bolsheviks seize power (by the modern calendar)?",
+      "question": "What was the main slogan of the Bolsheviks?",
       "options": [
-        "October 1917",
-        "November 1917",
-        "March 1918",
-        "July 1917"
+        "Land, Peace, Work",
+        "Freedom, Equality, Brotherhood",
+        "Peace, Land, Bread",
+        "God, Tsar, Fatherland"
+      ],
+      "correct": 3,
+      "explanation": "The Bolshevik slogan was 'Peace, Land, and Bread' — a direct answer to what people wanted most."
+    },
+    {
+      "question": "How many people followed Vladimir Lenin?",
+      "options": [
+        "200,000",
+        "80,000",
+        "150,000",
+        "250,000"
+      ],
+      "correct": 1,
+      "explanation": "By this point around 200,000 people had rallied to Lenin's side."
+    },
+    {
+      "question": "What was the main reason the Bolsheviks gained so much support?",
+      "options": [
+        "They promised to make Russia stronger",
+        "They supported the continuation of war",
+        "They signed a treaty with France",
+        "They offered exactly what people needed"
+      ],
+      "correct": 4,
+      "explanation": "The Bolsheviks won support by offering people exactly what they wanted, while the other parties did not."
+    },
+    {
+      "question": "When exactly did Lenin return to Russia, and where had he been before?",
+      "options": [
+        "January 1917, from prison in Serbia",
+        "April 1917, from exile abroad",
+        "October 1918, from a military camp",
+        "December 1917, from hiding in Finland"
       ],
       "correct": 2,
-      "explanation": "Although known as the October Revolution under the old calendar, the Bolshevik seizure of power happened in November 1917."
+      "explanation": "Lenin returned to Russia in April 1917 after years of exile abroad."
     },
     {
-      "section": "Section 3 — The Russian Revolution",
-      "question": "Which treaty took Russia out of the First World War?",
+      "question": "What was the name of the peace treaty for Russia?",
       "options": [
+        "The Treaty of Petrograd",
         "The Treaty of Versailles",
-        "The Treaty of Sèvres",
         "The Treaty of Brest-Litovsk",
-        "The Treaty of Saint-Germain"
+        "The Treaty of the Eastern Front"
       ],
       "correct": 3,
-      "explanation": "In March 1918 the Bolsheviks signed the Treaty of Brest-Litovsk with Germany and the Central Powers, ending Russia's war."
+      "explanation": "Russia left the war by signing the Treaty of Brest-Litovsk with Germany in 1918."
     },
     {
-      "section": "Section 3 — The Russian Revolution",
-      "question": "Which territories did Russia surrender under Brest-Litovsk?",
+      "question": "What long-term consequence of the Russian Revolution is mentioned in the conclusion?",
       "options": [
-        "Siberia, Mongolia and Crimea",
-        "Poland, Bohemia and Serbia",
-        "Ukraine, the Baltic states and Finland",
-        "Only a thin strip of land near Berlin"
+        "Long-term tension between Russia and the Eastern Front",
+        "The invention of nuclear weapons",
+        "The rise of the Soviet Union",
+        "The start of WWII"
       ],
       "correct": 3,
-      "explanation": "Russia gave up an enormous stretch of territory — Ukraine, the Baltic states and Finland — along with much of its population and farmland."
+      "explanation": "The revolution's great long-term consequence was the rise of the Soviet Union, the world's first communist state."
     },
     {
-      "section": "Section 4 — The Strategic Balance",
-      "question": "Roughly how many German divisions were transferred from the East to the Western Front after Russia's collapse?",
+      "question": "What does signing an armistice mean?",
       "options": [
-        "About 10 divisions",
-        "Around 50 divisions",
-        "Over 200 divisions",
-        "None — the troops stayed in Russia"
+        "Two sides agree to stop fighting against each other",
+        "It means giving up a battle",
+        "Two sides forming an alliance",
+        "To give up the throne"
       ],
-      "correct": 2,
-      "explanation": "Germany moved around fifty divisions — hundreds of thousands of soldiers — west, gaining a real numerical advantage for the first time."
-    },
-    {
-      "section": "Section 4 — The Strategic Balance",
-      "question": "What was the name of Germany's massive 1918 attack in the West?",
-      "options": [
-        "Operation Barbarossa",
-        "The Schlieffen Plan",
-        "The Ludendorff Retreat",
-        "The Spring Offensive (Kaiserschlacht)"
-      ],
-      "correct": 4,
-      "explanation": "In spring 1918 Germany launched the Kaiserschlacht — the 'Kaiser's Battle' — hoping to win before American troops arrived in force."
-    },
-    {
-      "section": "Section 4 — The Strategic Balance",
-      "question": "Why did the Spring Offensive ultimately fail?",
-      "options": [
-        "Germany ran out of ammunition before the first day",
-        "Russia rejoined the war on the Allied side",
-        "The army overstretched, supply lines failed, and fresh US troops arrived in France",
-        "Bad weather prevented any advance at all"
-      ],
-      "correct": 3,
-      "explanation": "The offensive overstretched the German army — supply lines could not keep up with the advance, and fresh American troops were arriving in France."
-    },
-    {
-      "section": "Section 5 — Significance",
-      "question": "What was the long-term political significance of the Russian Revolution?",
-      "options": [
-        "It restored the Romanov dynasty",
-        "It produced the world's first communist state — the Soviet Union",
-        "It ended communism forever in Europe",
-        "It united Russia with Germany permanently"
-      ],
-      "correct": 2,
-      "explanation": "The Revolution gave birth to the Soviet Union — the world's first communist state — which would shape global politics for the rest of the 20th century."
+      "correct": 1,
+      "explanation": "An armistice is an agreement between two sides to stop fighting."
     }
   ]
 }
